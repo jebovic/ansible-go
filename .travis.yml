@@ -1,0 +1,17 @@
+language: python
+python: '2.7'
+sudo: false
+addons:
+  apt:
+    packages:
+    - python-pip
+install:
+- pip install ansible
+- ansible --version
+- printf '[defaults]\nroles_path=../' >ansible.cfg
+script:
+- ansible-playbook tests/test.yml -i tests/inventory --syntax-check
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+  slack:
+    secure: LGieBHfAiQWBQ0DseQI1BapUPkfV4qfRWSlKJZa534Dm5pVhFKYG6c3BFdgee1hmqJcxE+UcBxIIYpsPCHx+fpNTWp05ubEnKgDTsdpAgA+ktRkpEPf4QTnFUttcPX4x4XfU2urXh/eoUxNNc2HBRqYmvX41427Y8/WM80ug1pen5OqPfAb5bjKU19rvblvykfD0pfLjJ5fdQvnK5XpTCPjbCACFXVASNH+I1feWGW+JAvGZwG8XUE7COq1sPSJvvOVR4A4diNNmsVCddwiNufX0Vv14DO9Vhbb+KjWr3nNV0qQvBiQQAMQlzTjUZn+W5SSWZhyRprTKo5THo9Wl/gVsxA8Ms9e59LWv3fmsm5z6/tm+q1YBYfCvU2FFUWUUuW6yIn5xf7S9XDqg6Ayta2Gw6j8Q9zIdcCHNyz+de4tvX967QJLaVCu2HYsTUCXfoaB9g22OyrGXRsoRA5WTv0lJmpZFPlsYu/RomcZ8mSZKSxgwtnwKixcs1qZedjroOwNUZYHoy5XZfrZoJRjSXS38Gv7Xk6AK3V4RrDUsSVDGjGwTwZIdFh4kCgZusHQbQktJJens/toYf11JavHS557qzkZCDjjdRgnA/GLl14Gk4Af2ePsGQczLd+FtmfSN8AQbZ4veJMTcKobHWApTmlYvFSMCYXuhro+zasWMxtY=
