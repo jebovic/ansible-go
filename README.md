@@ -1,6 +1,8 @@
 Golang
 ======
 
+[![Build Status](https://travis-ci.org/jebovic/ansible-go.svg?branch=master)](https://travis-ci.org/jebovic/ansible-go)
+
 Install and configure golang dev environment
 
 Role Variables
