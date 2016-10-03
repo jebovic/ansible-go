@@ -1,7 +1,7 @@
 Golang
 ======
 
-[![Build Status](https://travis-ci.org/jebovic/ansible-go.svg?branch=master)](https://travis-ci.org/jebovic/ansible-go)
+[![Build Status](https://travis-ci.org/jebovic/ansible-go.svg?branch=master)](https://travis-ci.org/jebovic/ansible-go) [![Ansible Galaxy](https://img.shields.io/badge/galaxy-jebovic.go-blue.svg?style=flat)](https://galaxy.ansible.com/jebovic/go)
 
 Install and configure golang dev environment
 
