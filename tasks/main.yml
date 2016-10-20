@@ -29,3 +29,10 @@
     src: "{{ go_extract_path }}/go/bin/go"
     dest: "{{ go_bin_path }}"
     state: link
+
+- name: set GOPATH
+  template:
+    src: go_path.sh.j2
+    dest: /etc/profile.d/go_path.sh
+    mode: 0644
+  when: go_path

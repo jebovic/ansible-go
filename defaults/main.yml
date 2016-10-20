@@ -9,3 +9,4 @@ go_download_path: "/tmp"
 go_tarball_path: "{{ go_download_path }}/{{ go_tarball }}"
 go_extract_path: "/usr/local"
 go_bin_path: "/usr/local/bin/go"
+go_path: /srv/golang
