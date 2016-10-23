@@ -8,7 +8,7 @@ Install and configure golang dev environment
 Role Variables
 --------------
 
-```
+```yaml
 # Configurtion for download and install golang
 go_tarball: "go1.7.linux-amd64.tar.gz"
 go_version_target: "go version go1.7 linux/amd64"
@@ -18,16 +18,22 @@ go_download_path: "/tmp"
 go_tarball_path: "{{ go_download_path }}/{{ go_tarball }}"
 go_extract_path: "/usr/local"
 go_bin_path: "/usr/local/bin/go"
+go_path: "/srv/golang"
 ```
 
 Example Playbook
 ----------------
 
+```yaml
+- hosts: servers
+  roles:
+     - { role: jebovic.go }
 ```
-    - hosts: servers
-      roles:
-         - { role: jebovic.go }
-```
+
+Tags
+----
+
+* go_config : only update GOPATH
 
 License
 -------
